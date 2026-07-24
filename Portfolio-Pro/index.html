@@ -8,7 +8,25 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Salman Portfolio</title>
+   <title>Salman Karim Bondhon | Software Engineer & SQA Engineer</title>
+
+<meta name="description"
+      content="Portfolio of Salman Karim Bondhon.">
+
+<meta name="keywords"
+      content="Portfolio, ASP.NET, C#, JavaScript">
+
+<meta name="author"
+      content="Salman Karim Bondhon">
+
+<meta name="theme-color"
+      content="#2563eb">
+
+<link rel="icon"
+      href="/Portfolio-Pro/assets/img/favicon.png">
+
+
+
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -20,44 +38,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <link rel="stylesheet"
-          href="Portfolio-Pro/assets/css/style.css">
+  href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
 
 </head>
 
 <body>
 
-    <body>
+    <div id="loader">
+
+    <div class="loader-content">
+
+        <div class="spinner"></div>
+
+        <h2>Salman Karim Bondhon</h2>
+
+         <p>Software Engineer & SQA Engineer</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
     <header>
         <nav>
 
-    <div class="logo">
-        Salman
-    </div>
+   <div class="logo">
+        My Profile
+    </div> 
 
     <ul class="nav-links">
 
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#hero" class="nav-link">Home</a></li>
 
-        <li><a href="#about">About</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
 
-        <li><a href="#skills">Skills</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
 
-        <li><a href="#projects">Projects</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
 
-        <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
 
     </ul>
 
-    <button class="theme-btn">
+    <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+</div>
+    <button id="theme-btn">
         🌙
     </button>
-
+  
 </nav>
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" data-aos="fade-up">
 
     <div class="hero-content">
 
@@ -68,13 +122,15 @@
             </p>
 
             <h1>
-                Salman Karim Bondhon
+                Md. Salman Karim Bondhon
             </h1>
 
-            <h2>
-                Front-End Developer &
-                Future .NET Developer
-            </h2>
+           <h2>
+
+                 <span id="typing"></span>
+                 <span class="cursor">|</span>
+
+           </h2>
 
             <p class="description">
 
@@ -85,9 +141,25 @@
 
             <div class="hero-buttons">
 
-                <button class="primary-btn">
-                    Download CV
-                </button>
+                <a href="assets/cv/Salman_Karim_CV_P.pdf"
+                     download
+                          class="primary-btn">
+
+                     <i class="fas fa-download"></i>
+
+                          Download CV
+
+                </a>
+
+                <a href="assets/cv/Salman_Karim_CV_P.pdf"
+                      target="_blank"
+                       class="secondary-btn">
+
+                           <i class="fas fa-file-pdf"></i>
+
+                      View CV
+
+                </a>
 
                 <button class="secondary-btn">
                     Contact Me
@@ -100,7 +172,7 @@
         <div class="hero-image">
 
             <img
-                src="Portfolio-Pro/assets/img/profile.jpeg"
+                src="assets/img/profile.jpeg"
                 alt="Salman">
 
         </div>
@@ -118,16 +190,879 @@
 
 
 
-        <section id="about"></section>
-        <section id="skills"></section>
-        <section id="projects"></section>
-        <section id="contact"></section>
+        <section id="about" data-aos="fade-right">
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img src="assets/img/aboutpic.png"
+                 alt="Salman">
+
+        </div>
+
+        <div class="about-content">
+
+            <h2>About Me</h2>
+
+            <p>
+
+                Hello! I'm <strong>Salman Karim Bondhon</strong>,
+                a Computer Science graduate from AIUB.
+
+                I enjoy creating modern websites using
+                HTML, CSS, JavaScript, and ASP.NET.
+
+            </p>
+
+            <div class="about-cards">
+
+                <div class="card">
+
+                    <h3>🎓 Education</h3>
+
+                    <p>
+                        BSc in CSE<br>
+                        AIUB
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>💼 Experience</h3>
+
+                    <p>
+                        SQA Engineer Intern
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>📍 Location</h3>
+
+                    <p>
+                        Bangladesh
+                    </p>
+
+                </div>
+
+            </div>
+
+            <button class="primary-btn">
+
+                Download CV
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+      <section id="skills" data-aos="fade-up">
+
+    <h2 class="section-title">
+
+        My Skills
+
+    </h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            
+            <i class="devicon-html5-plain-wordmark colored"></i>
+          
+
+            <h3>HTML5</h3>
+
+            <p>
+                Semantic HTML,
+                Forms,
+                Accessibility
+            </p>
+
+             <div class="progress-bar">
+
+                  <div class="progress html"></div>
+
+            </div>
+
+              <span>95%</span>
+
+        </div>
+
+        <div class="skill-card">
+             
+            <i class="devicon-css3-plain-wordmark colored"></i>
+          
+
+            <h3> CSS3</h3>
+
+            <p>
+                Flexbox,
+                Grid,
+                Responsive Design
+            </p>
+
+             <div class="progress-bar">
+
+                  <div class="progress css"></div>
+
+            </div>
+
+              <span>66%</span>
+
+        </div>
+
+        <div class="skill-card">
+           
+            <i class="devicon-javascript-plain colored"></i>
+          
+
+            <h3> JavaScript</h3>
+
+            <p>
+                DOM,
+                ES6,
+                Events
+            </p>
+
+            <div class="progress-bar">
+
+                  <div class="progress javascript"></div>
+
+            </div>
+
+              <span>66%</span>
+
+        </div>
+
+        <div class="skill-card">
+
+            <i class="devicon-csharp-plain colored"></i>
+
+            <h3>C#</h3>
+
+            <p>
+                OOP,
+                Collections,
+                LINQ
+            </p>
+
+            <div class="progress-bar">
+
+                  <div class="progress csharp"></div>
+
+            </div>
+
+              <span>66%</span>
+
+        </div>
+
+        <div class="skill-card">
+           <i class="devicon-microsoftsqlserver-plain colored"></i>
+
+            <h3>SQL</h3>
+
+            <p>
+                MySQL,
+                SQL Server
+            </p>
+
+             <div class="progress-bar">
+
+                  <div class="progress sql"></div>
+
+            </div>
+
+              <span>76%</span>
+
+        </div>
+
+        <div class="skill-card">
+
+            <i class="devicon-dotnetcore-plain colored"></i>
+
+            <h3> ASP.NET</h3>
+
+            <p>
+                MVC,
+                Entity Framework
+            </p>
+
+            <div class="progress-bar">
+
+                  <div class="progress aspnet"></div>
+
+            </div>
+
+              <span>80%</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+       <section id="projects" data-aos="zoom-in">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+
+                <div class="project-image">
+
+                                 <img src="assets/img/projects/project1.jpg"
+                                     alt="Library Management System">
+
+                          
+
+                         <div class="project-content">
+
+                             <h3>Library Management System</h3>
+
+                                  <p>
+
+                                         Console application built with
+                                         C# and JSON serialization.
+
+                                  </p>
+
+                                <div class="tech-stack">
+
+                                        <span>C#</span>
+                                        <span>OOP</span>
+                                        <span>JSON</span>
+
+                                </div>
+
+                
+
+                        </div>
+
+
+                </div>
+
+                        <div class="project-buttons">
+
+    <a href="YOUR_LIVE_LINK"
+       target="_blank"
+       class="demo-btn">
+
+        <i class="fas fa-globe"></i>
+
+        Live Demo
+
+    </a>
+
+    <a href="https://github.com/salmanbondhon/LibraryManagementSystem"
+       target="_blank"
+       class="github-btn">
+
+        <i class="fab fa-github"></i>
+
+        GitHub
+
+    </a>
+
+</div>
+
+                </div>
+
+
+
+
+         <div class="project-card">
+
+            <img src="assets/img/projects/project2.jpg"
+                 alt="Blood Management System">
+
+            <div class="project-content">
+
+                <h3> Blood Management System</h3>
+
+                <p>
+
+                    Console application built with
+                    C# and JSON serialization.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>JSON</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="#">GitHub</a>
+
+                    <a href="#">Live Demo</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img src="assets/img/projects/project3.jpg"
+                 alt="SQA Automation Project">
+
+            <div class="project-content">
+
+                <h3>SQA Automation Project</h3>
+
+                <p>
+
+                    Console application built with
+                    C# and JSON serialization.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>JSON</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="#">GitHub</a>
+
+                    <a href="#">Live Demo</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+         <div class="project-card">
+
+            <img src="assets/img/projects/project4.jpg"
+                 alt="Student Management System">
+
+            <div class="project-content">
+
+                <h3>📋 Student Management System</h3>
+
+                <p>
+
+                    Console application built with
+                    C# and JSON serialization.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>JSON</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="#">GitHub</a>
+
+                    <a href="#">Live Demo</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+         <div class="project-card">
+
+            <img src="assets/img/projects/project5.jpg"
+                 alt="Library Management System">
+
+            <div class="project-content">
+
+                <h3>🛒 E-Commerce Website</h3>
+
+                <p>
+
+                    Console application built with
+                    C# and JSON serialization.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>C#</span>
+                    <span>OOP</span>
+                    <span>JSON</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="#">GitHub</a>
+
+                    <a href="#">Live Demo</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="project-card">
+
+            <img src="assets/img/projects/project6.jpg"
+                 alt="Portfolio">
+
+            <div class="project-content">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+
+                    Responsive portfolio built with
+                    HTML, CSS and JavaScript.
+
+                </p>
+
+                <div class="tech-stack">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="#">GitHub</a>
+
+                    <a href="#">Live Demo</a>
+
+                </div>
+
+            </div>
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<section id="experience" data-aos="fade-up">
+
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-date">
+                    May 2024 – Sep 2024
+                </span>
+
+                <h3>SQA Engineer Intern</h3>
+
+                <h4>Unicorn Software Solutions Ltd.</h4>
+
+                <p>
+                    Performed manual testing, regression testing,
+                    created test cases, reported bugs using Jira,
+                    and collaborated with developers in Agile teams.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-date">
+                    2025
+                </span>
+
+                <h3>B.Sc. in Computer Science & Engineering</h3>
+
+                <h4>American International University-Bangladesh</h4>
+
+                <p>
+                    Graduated with CGPA 3.63/4.00.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-date">
+                    2026
+                </span>
+
+                <h3>Master's Admission Journey</h3>
+
+                <h4>Germany</h4>
+
+                <p>
+                    Applied for MSc programs and preparing for higher studies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section id="stats" data-aos="fade-up">
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="6">0</h2>
+
+            <p>Projects Completed</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="10">0</h2>
+
+            <p>Technologies Learned</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="1">0</h2>
+
+            <p>Internship</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 class="counter" data-target="2">0</h2>
+
+            <p>Years of Learning</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="certificates" data-aos="fade-up">
+
+    <h2 class="section-title">Certificates</h2>
+
+    <div class="certificate-container">
+
+        <div class="certificate-card">
+
+            <i class="fas fa-certificate"></i>
+
+            <h3>IELTS</h3>
+
+            <p>
+                Overall Band Score: <strong>5.5</strong>
+            </p>
+
+            <a href="#" target="_blank">
+                View Certificate
+            </a>
+
+        </div>
+
+        <div class="certificate-card">
+
+            <i class="fas fa-award"></i>
+
+            <h3>SQA Internship</h3>
+
+            <p>
+                Unicorn Software Solutions Ltd.
+            </p>
+
+            <a href="#" target="_blank">
+                View Certificate
+            </a>
+
+        </div>
+
+        <div class="certificate-card">
+
+            <i class="fas fa-code"></i>
+
+            <h3>C# & ASP.NET</h3>
+
+            <p>
+                Personal Learning & Projects
+            </p>
+
+            <a href="#" target="_blank">
+                View Details
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="contact" data-aos="fade-left">
+
+    <h2 class="section-title">
+
+        Contact Me
+
+    </h2>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <div class="contact-item">
+
+                <h3>📧 Email</h3>
+
+                <p>bondhon.mdsalmankarim@gmail.com</p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <h3>📞 Phone</h3>
+
+                <p>+8801622992894</p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <h3>📍 Location</h3>
+
+                <p>B Block, Bashundhara R/A</p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <h3>💻 GitHub</h3>
+
+                <p><a href="https://github.com/salmanbondhon" target="_blank">
+    GitHub
+</a></p>
+
+            </div>
+
+        </div>
+
+        <form id="contact-form">
+
+            <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                name="from_email"
+                placeholder="Your Email"
+                required>
+
+            <textarea
+            name="message"
+                rows="6"
+                placeholder="Your Message"
+                required></textarea>
+
+            <button
+                type="submit"
+                class="primary-btn">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
     </main>
 
-    <footer></footer>
-</body>
+       <footer>
 
-    <script src="Portfolio-Pro/assets/js/script.js"></script>
+        <div class="footer-container">
+
+        <h2 class="footer-logo">
+
+            Salman Portfolio
+
+        </h2>
+
+        <ul class="footer-links">
+
+            <li><a href="#hero">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <div class="footer-social">
+
+            <a href="https://github.com/salmanbondhon" target="_blank">GitHub</a>
+
+            <a href="#">LinkedIn</a>
+
+            <a href="mailto:your@email.com">Email</a>
+
+        </div>
+
+            <p>
+ 
+               © <span id="year"></span>
+               Salman Karim Bondhon.
+                All Rights Reserved.
+ 
+           </p>
+
+         </div>
+
+    </footer>
+
+<button id="top-btn">
+    <i class="fas fa-arrow-up"></i>
+</button>    
+
+
+
+
+
+       <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+       <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+       <script src="assets/js/script.js"></script>
+
+
+ 
 
 </body>
 
