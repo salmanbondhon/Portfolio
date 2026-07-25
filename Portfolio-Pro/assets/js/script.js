@@ -44,7 +44,7 @@ AOS.init({
 
 const roles = [
     "Front-End Developer",
-    ".NET Developer",
+    "ASP.NET Core Developer",
     "SQA Engineer"
 ];
 
@@ -110,30 +110,54 @@ typeText();
 emailjs.init("euyRYjeEAK1T-4P_v");
 
 const contactForm = document.getElementById("contact-form");
+const sendBtn = document.getElementById("send-btn");
 
 contactForm.addEventListener("submit", function(e){
 
     e.preventDefault();
 
+    sendBtn.disabled = true;
+
+    sendBtn.innerHTML =
+    '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
     emailjs.sendForm(
 
         "service_tz4yi8j",
-
         "template_xgz5j6c",
-
         this
 
-    ).then(function(){
+    ).then(() => {
 
-        alert("✅ Message Sent Successfully!");
+        sendBtn.innerHTML =
+        '<i class="fas fa-check"></i> Message Sent!';
 
         contactForm.reset();
 
-    }).catch(function(error){
+        setTimeout(() => {
 
-        alert("❌ Failed to Send!");
+            sendBtn.disabled = false;
+
+            sendBtn.innerHTML =
+            '<i class="fas fa-paper-plane"></i> Send Message';
+
+        },2000);
+
+    }).catch((error)=>{
 
         console.log(error);
+
+        sendBtn.disabled = false;
+
+        sendBtn.innerHTML =
+        '<i class="fas fa-times"></i> Failed! Try Again';
+
+        setTimeout(() => {
+
+            sendBtn.innerHTML =
+            '<i class="fas fa-paper-plane"></i> Send Message';
+
+        },2000);
 
     });
 
@@ -234,7 +258,7 @@ topBtn.addEventListener("click", () => {
 
 
 
-const skillSection = document.querySelector("#skills");
+/*const skillSection = document.querySelector("#skills");
 const progressBars = document.querySelectorAll(".progress");
 
 const skillObserver = new IntersectionObserver((entries) => {
@@ -250,8 +274,40 @@ const skillObserver = new IntersectionObserver((entries) => {
 });
 
 skillObserver.observe(skillSection);
+*/
 
 
+const skillBars = document.querySelectorAll(".skill-progress");
+
+const skillObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            skillBars.forEach(bar=>{
+
+                bar.style.width =
+                bar.dataset.progress + "%";
+
+            });
+
+        }
+        else{
+
+            skillBars.forEach(bar=>{
+
+                bar.style.width="0";
+
+            });
+
+        }
+
+    });
+
+});
+
+skillObserver.observe(document.querySelector("#skills"));
 
 
 
@@ -262,44 +318,31 @@ skillObserver.observe(skillSection);
 
 
 const counters = document.querySelectorAll(".counter");
-
-const statsSection = document.querySelector("#stats");
+const aboutSection = document.querySelector("#about");
 
 const counterObserver = new IntersectionObserver((entries) => {
-
     if (entries[0].isIntersecting) {
 
         counters.forEach(counter => {
-
             const target = parseInt(counter.dataset.target);
-
             let count = 0;
 
             const interval = setInterval(() => {
-
                 count++;
-
                 counter.innerText = count;
 
                 if (count >= target) {
-
                     counter.innerText = target + "+";
-
                     clearInterval(interval);
-
                 }
-
-            }, 150); // Increase to 200ms for even slower animation
-
+            }, 150);
         });
 
-        counterObserver.unobserve(statsSection);
-
+        counterObserver.unobserve(aboutSection);
     }
-
 });
 
-counterObserver.observe(statsSection);
+counterObserver.observe(aboutSection);
 
 
 
@@ -311,5 +354,67 @@ window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
 
     loader.classList.add("hide");
+
+});
+
+
+
+
+document.querySelectorAll(".description").forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+
+        card.style.setProperty("--x", `${e.clientX - rect.left}px`);
+        card.style.setProperty("--y", `${e.clientY - rect.top}px`);
+    });
+
+});
+
+
+
+
+
+
+
+document.querySelectorAll(".project-card").forEach(card => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty("--x", `${x}px`);
+        card.style.setProperty("--y", `${y}px`);
+
+    });
+
+});
+
+
+
+
+
+
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+
+        tabContents.forEach(tab => tab.classList.remove("active"));
+
+        button.classList.add("active");
+
+        document
+            .getElementById(button.dataset.tab)
+            .classList.add("active");
+
+    });
 
 });
